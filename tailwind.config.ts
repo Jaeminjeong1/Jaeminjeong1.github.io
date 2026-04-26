@@ -5,11 +5,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: '#0f1115',
-        panel: '#171a21',
-        border: '#262a35',
-        accent: '#7c5cff',
-        muted: '#8a93a6',
+        bg: '#0a0202',
+        panel: 'rgba(15, 23, 42, 0.55)',
+        border: 'rgba(255, 255, 255, 0.08)',
+        accent: '#f43f5e',
+        accent2: '#fb923c',
+        muted: '#a1a1aa',
+      },
+      boxShadow: {
+        'glow-rose': '0 0 25px rgba(244, 63, 94, 0.45)',
       },
       fontFamily: {
         sans: ['Pretendard', 'system-ui', 'sans-serif'],

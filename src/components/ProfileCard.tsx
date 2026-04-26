@@ -3,12 +3,12 @@ import { Avatar } from './Avatar';
 
 export function ProfileCard() {
   return (
-    <aside className="bg-panel border border-border rounded-2xl p-6 sticky top-20">
+    <aside className="glass-card rounded-2xl p-6 sticky top-20 self-start">
       <div className="flex flex-col items-center text-center">
-        <div className="size-28 rounded-full bg-[#1f2330] border border-border overflow-hidden mb-4">
+        <div className="size-28 rounded-full bg-[#1a0808] border border-accent/30 overflow-hidden mb-4 shadow-glow-rose">
           <Avatar src={profile.photo} alt={profile.name} fallback={profile.name.slice(0, 1)} />
         </div>
-        <h1 className="text-xl font-semibold text-white">{profile.name}</h1>
+        <h1 className="text-xl font-bold text-white">{profile.name}</h1>
         <p className="text-xs text-muted mt-1">{profile.title}</p>
       </div>
 
@@ -21,7 +21,7 @@ export function ProfileCard() {
           <span className="text-[10px] uppercase tracking-widest text-muted">
             Final Vocabulary
           </span>
-          <div className="mt-1 inline-block px-3 py-1 rounded-full bg-accent/15 text-accent text-sm font-mono">
+          <div className="mt-1 inline-block px-3 py-1 rounded-full bg-accent/15 text-accent text-sm font-mono border border-accent/30">
             {profile.finalVocabulary}
           </div>
         </div>
@@ -30,14 +30,19 @@ export function ProfileCard() {
       <Section title="Contact">
         <ul className="space-y-1.5 text-sm">
           {profile.contacts.map((c) => (
-            <li key={c.label} className="flex justify-between">
-              <span className="text-muted">{c.label}</span>
+            <li key={c.label} className="flex justify-between items-center gap-2">
+              <span className="text-muted text-xs">{c.label}</span>
               {c.href ? (
-                <a href={c.href} className="text-[#e7eaf2] hover:text-accent" target="_blank" rel="noreferrer">
+                <a
+                  href={c.href}
+                  className="text-[#e7eaf2] hover:text-accent text-xs truncate"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {c.value}
                 </a>
               ) : (
-                <span>{c.value}</span>
+                <span className="text-xs">{c.value}</span>
               )}
             </li>
           ))}
@@ -79,13 +84,16 @@ export function ProfileCard() {
       )}
 
       <Section title="기술 스택">
-        <div className="space-y-2">
+        <div className="space-y-2.5">
           {Object.entries(profile.stack).map(([cat, items]) => (
             <div key={cat}>
-              <div className="text-xs text-muted mb-1">{cat}</div>
+              <div className="text-[10px] uppercase tracking-wider text-muted mb-1.5">{cat}</div>
               <div className="flex flex-wrap gap-1.5">
                 {(items as string[]).map((s) => (
-                  <span key={s} className="px-2 py-0.5 rounded bg-[#1f2330] text-xs">
+                  <span
+                    key={s}
+                    className="px-2 py-0.5 rounded-md bg-[#1a0808] border border-white/5 text-xs text-gray-300"
+                  >
                     {s}
                   </span>
                 ))}
@@ -100,8 +108,8 @@ export function ProfileCard() {
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="mt-6 pt-5 border-t border-border">
-      <h2 className="text-[11px] uppercase tracking-widest text-muted mb-3">{title}</h2>
+    <section className="mt-6 pt-5 border-t border-white/5">
+      <h2 className="text-[10px] uppercase tracking-widest text-accent/80 mb-3">{title}</h2>
       {children}
     </section>
   );
