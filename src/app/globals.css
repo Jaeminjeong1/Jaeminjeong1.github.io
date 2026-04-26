@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #0f1115;
+  color: #e7eaf2;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.prose-blog h2 { @apply mt-10 mb-4 text-2xl font-semibold text-white; }
+.prose-blog h3 { @apply mt-8 mb-3 text-xl font-semibold text-white; }
+.prose-blog p { @apply leading-7 my-4 text-[#cbd0dc]; }
+.prose-blog ul { @apply list-disc pl-6 my-4 text-[#cbd0dc]; }
+.prose-blog ol { @apply list-decimal pl-6 my-4 text-[#cbd0dc]; }
+.prose-blog code { @apply bg-[#1f2330] px-1.5 py-0.5 rounded text-sm font-mono text-accent; }
+.prose-blog pre { @apply bg-[#1a1d27] border border-border rounded-lg p-4 my-5 overflow-x-auto; }
+.prose-blog pre code { @apply bg-transparent text-[#e7eaf2] p-0; }
+.prose-blog blockquote { @apply border-l-4 border-accent pl-4 my-5 text-muted italic; }
+.prose-blog a { @apply text-accent underline-offset-2 hover:underline; }
+.prose-blog .wikilink { @apply px-1 rounded bg-[#1f2330] text-accent hover:bg-[#2a2f3f]; }

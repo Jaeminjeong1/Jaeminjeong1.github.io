@@ -1,0 +1,24 @@
+{
+  "name": "정재민",
+  "title": "예측 가능한 시스템에 관심이 많은 개발자",
+  "intro": "운영 환경에서의 실패를 전제로, 변경에 강하고 실패에 안전한 백엔드 구조를 고민합니다.",
+  "photo": "/profile.jpg",
+  "finalVocabulary": "Predictability",
+  "contacts": [
+    { "label": "Email", "value": "woals5633@daum.net", "href": "mailto:woals5633@daum.net" },
+    { "label": "GitHub", "value": "Jaeminjeong1", "href": "https://github.com/Jaeminjeong1" },
+    { "label": "BOJ", "value": "woals5633", "href": "https://solved.ac/woals5633" }
+  ],
+  "education": [
+    { "school": "한양대학교 정보시스템학과", "period": "2021.03 ~ 재학" }
+  ],
+  "activities": [
+    { "name": "데이터분석 연합동아리 DF", "period": "2025.01 ~ 2025.09" }
+  ],
+  "awards": [],
+  "stack": {
+    "백엔드": ["Java", "Spring Boot", "JPA(Hibernate)", "PostgreSQL", "MySQL"],
+    "인프라": ["AWS", "Docker"],
+    "프런트엔드": ["Flutter"]
+  }
+}
